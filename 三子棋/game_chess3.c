@@ -37,16 +37,23 @@ void player_move()
 		int row = 0;
 		int col = 0;
 		printf("请玩家输入坐标（row col）: ");
-		scanf("%d %d", &row, &col);
+		/*---清空输入缓冲区---*/
+		fflush(stdin);
+		int check_input = scanf("%d %d", &row, &col);
+		if (check_input != 2)
+		{
+			printf("输入不合法，请重新输入！\n");
+			continue;
+		}
 		if (row < 1 || row > ROW ||
 			col < 1 || col > COL)
 		{
-			printf("大兄弟，别瞎逼输入（手动滑稽）！\n");
+			printf("输入不合法，请重新输入！\n");
 			continue;
 		}
 		if (g_borad[row - 1][col - 1] != ' ')
 		{
-			printf("大兄弟，别瞎逼输入（手动滑稽）！\n");
+			printf("输入不合法，请重新输入！\n");
 			continue;
 		}
 		g_borad[row - 1][col - 1] = 'x';
@@ -124,14 +131,14 @@ void print_result()
 {
 	if (winner == 'x')
 	{
-		printf("恭喜老铁赢了普通电脑（手动滑稽）！\n");
+		printf("玩家胜利！\n");
 	}
 	if (winner == 'o')
 	{
-		printf("噗嗤，愚蠢的电脑战胜了你（手动滑稽）！\n");
+		printf("电脑胜利！\n");
 	}
 	if (winner == 'q')
 	{
-		printf("（手动滑稽）！\n");
+		printf("和棋！\n");
 	}
 }
