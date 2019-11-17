@@ -1,13 +1,13 @@
 /*
-**	ÊÇ·ñÎª2µÄÃÝ
+**	ï¿½Ç·ï¿½Îª2ï¿½ï¿½ï¿½ï¿½
 */
 
 #define _CRT_SECURE_NO_WARNINGS
 
-#include "stdio.h"
-#include "stdlib.h"
+#include <stdio.h>
+#include <stdlib.h>
 
-//2µÄÃÝÅÐ¶Ï
+//2ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½
 int isPowOfTwo(int n)
 {
 	if (n <= 0)
@@ -25,16 +25,16 @@ int main()
 {
 	int num = 0;
 	int flag = 0;
-	printf("ÇëÊäÈëÒ»¸öÊý: \n");
+	printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½: \n");
 	scanf("%d", &num);
 	flag = isPowOfTwo(num);
 	if (flag == 1)
 	{
-		printf("ÊÇ2µÄÃÝ!\n");
+		printf("ï¿½ï¿½2ï¿½ï¿½ï¿½ï¿½!\n");
 	}
 	else
 	{
-		printf("²»ÊÇ2µÄÃÝ!\n");
+		printf("ï¿½ï¿½ï¿½ï¿½2ï¿½ï¿½ï¿½ï¿½!\n");
 	}
 	system("pause");
 	return 0;
